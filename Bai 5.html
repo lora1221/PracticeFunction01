@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //function to find the corresponding start
+    function findStart(str) {
+        var position = -1;
+        var result = "";
+        for(let i = 0, l = start1.length; i < l && position == -1 ; i ++) {
+            if (start1[i] == str) {
+                position = i;
+            }
+        }
+        if (position == -1) {
+            result = "Not found";
+        } else {
+            result = start2[position];
+        }
+        return result;
+    }
+
+    var start1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    var start2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    var input = prompt("Enter start name: ");
+
+    var output = findStart(input);
+    document.write(output);
+
+
+</script>
+
+</body>
+</html>

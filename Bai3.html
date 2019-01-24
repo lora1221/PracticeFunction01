@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+First Number: <input type="number" id="num1"/>
+Second Number: <input type="number" id="num2"/>
+<button type="submit" onclick="show();">Submit</button>
+<script>
+
+    function compare(x,y) {
+        if (x > y) {
+            alert("First number is bigger than the second number.");
+        } else {
+            alert("Sum of 2 numbers is: " + (x+y));
+        }
+    }
+
+    function show() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        compare(a, b);
+    }
+</script>
+</body>
+</html>
